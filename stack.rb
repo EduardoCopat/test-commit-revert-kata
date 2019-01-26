@@ -12,8 +12,12 @@ class Stack
         @elements.push(element)
     end
 
+    def empty?
+        size == 0
+    end
+
     def pop
-        if size == 0
+        if empty?
             raise RuntimeError
         end
         pop = @elements[size-1]
