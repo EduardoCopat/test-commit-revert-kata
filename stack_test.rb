@@ -14,4 +14,11 @@ describe "Stack" do
     stack.push "b"
     assert stack.size == 2
   end
+
+  it "should get pop elements" do
+    stack = Stack.new
+    stack.push "a"
+    
+    assert stack.pop == "a"
+  end
 end
