@@ -1,18 +1,20 @@
 class Stack
-    attr_accessor :size
+    
     def initialize
-        @size = 0
         @elements = []
     end
 
+    def size
+        @elements.length
+    end
+
     def push(element)
-        @size += 1
         @elements.push(element)
     end
 
     def pop
-        pop = @elements[@size-1]
-        @size -= 1
+        pop = @elements[size-1]
+        @elements.delete(pop)
         pop
     end
 
