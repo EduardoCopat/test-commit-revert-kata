@@ -10,6 +10,7 @@ class Stack
 
     def push(element)
         @elements.push(element)
+        @last = element
     end
 
     def empty?
@@ -20,9 +21,9 @@ class Stack
         if empty?
             raise RuntimeError
         end
-        pop = @elements[size-1]
-        @elements.delete(pop)
-        pop
+        
+        @elements.delete(@last)
+        @last
     end
 
 end
