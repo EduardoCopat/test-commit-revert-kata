@@ -29,4 +29,11 @@ describe "Stack" do
     
     assert stack.size == 0
   end
+
+  it "cant pop empty" do
+    assert_raises RuntimeError do 
+      stack = Stack.new
+      stack.pop
+    end
+  end
 end

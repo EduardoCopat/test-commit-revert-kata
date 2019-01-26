@@ -13,6 +13,9 @@ class Stack
     end
 
     def pop
+        if size == 0
+            raise RuntimeError
+        end
         pop = @elements[size-1]
         @elements.delete(pop)
         pop
