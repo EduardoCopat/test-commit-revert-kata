@@ -18,9 +18,7 @@ class Stack
     end
 
     def pop
-        if empty?
-            raise RuntimeError
-        end
+        raise RuntimeError unless !empty?
         
         @elements.delete(@last)
         @last
