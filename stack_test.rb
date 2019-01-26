@@ -7,4 +7,11 @@ describe "Stack" do
     stack.push "a"
     assert stack.size == 1
   end
+
+  it "should get size of all added elements" do
+    stack = Stack.new
+    stack.push "a"
+    stack.push "b"
+    assert stack.size == 2
+  end
 end

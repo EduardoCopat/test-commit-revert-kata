@@ -1,10 +1,11 @@
 class Stack
-    def push(element)
-
+    attr_accessor :size
+    def initialize
+        @size = 0
     end
 
-    def size
-        1
+    def push(element)
+        @size += 1
     end
 
 end
