@@ -11,7 +11,9 @@ class Stack
     end
 
     def pop
-        @elements[@size-1]
+        pop = @elements[@size-1]
+        @size -= 1
+        pop
     end
 
 end
